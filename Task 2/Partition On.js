@@ -4,17 +4,16 @@ http://www.codewars.com/kata/partition-on
 */
 
 function partitionOn(pred, items) {
-    var obj = [];
-    
-    for(var i=items.length-1;i>=0;i--){
-      if(!pred(items[i])){
-        obj.push(items[i]);
-        items.splice(i, 1);
-      }
+  var storeFalsePredItems = [];
+
+  for (var itemIndex = items.length - 1; itemIndex >= 0; itemIndex--) {
+    if (!pred(items[itemIndex])) {
+      storeFalsePredItems.push(items[itemIndex]);
+      items.splice(itemIndex, 1);
     }
-    
-    console.log('ITEMS ', items, 'OBJ ', obj.reverse());
-    items.splice(0, 0, ...obj);
-    
-    return obj.length;
-    }
+  }
+
+  items.splice(0, 0, ...storeFalsePredItems.reverse());
+
+  return storeFalsePredItems.length;
+}

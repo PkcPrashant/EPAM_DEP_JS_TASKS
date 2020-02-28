@@ -3,12 +3,10 @@ Question Link
 http://www.codewars.com/kata/word-count
 */
 
-function countWords(str) {
-    
-    str = str.trim();
-    
-    return str.length === 0
-      ? 0
-      : str.split(/\s+/g).length;
-    
-  }
+function countWords(myString) {
+  myString = myString.trim();
+  return myString.length === 0
+    ? 0
+    : myString.split(/\s+/g).length;
+
+}
