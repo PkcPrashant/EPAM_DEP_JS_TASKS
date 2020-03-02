@@ -1,0 +1,1 @@
+EPAM Practice Task 1 - Make a Static Blog Post Web Page using HTML5 & CSS3
