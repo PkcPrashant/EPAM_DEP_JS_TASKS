@@ -3,11 +3,11 @@ Question Link
 http://www.codewars.com/kata/partition-on
 */
 
-function partitionOn(pred, items) {
+function partitionOn(predicate, items) {
   var storeFalsePredItems = [];
 
   for (var itemIndex = items.length - 1; itemIndex >= 0; itemIndex--) {
-    if (!pred(items[itemIndex])) {
+    if (!predicate(items[itemIndex])) {
       storeFalsePredItems.push(items[itemIndex]);
       items.splice(itemIndex, 1);
     }
