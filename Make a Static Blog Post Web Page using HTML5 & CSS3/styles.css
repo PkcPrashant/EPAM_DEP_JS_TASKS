@@ -1,0 +1,151 @@
+body{
+    margin: 0px;
+}
+article.headerArticle{
+    background-color: darkslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+header{
+    background-color: white;
+    width: 250px;
+    height: 80px;
+    text-align: center;
+    border: 3px solid tomato;
+}
+header h1, header h4{
+    font-family: 'Odibee Sans', cursive;
+    text-transform: uppercase;
+}
+header h1{
+    font-size: xx-large;
+    margin-top: 10px;;
+}
+header h4{
+    margin-top: -25px;
+}
+main{
+    margin: 5px;
+}
+article.topSection{
+    display: flex;
+    justify-content: space-between;
+}
+article h1.mainHeading{
+    text-transform: uppercase;
+}
+label{
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+select{
+    width: 90px;
+    height: 30px;
+}
+input{
+    height: 30px;
+}
+button{
+    height: 36px;
+    margin-left: -5px;
+    padding: 8px;
+    border: none;
+}
+button.subscribe{
+    background-color: black;
+    color: white;
+}
+article.maincontent{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+article.titleone{
+    display: flex;
+    flex-direction: row;
+}
+figure{
+    margin: 0px;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+section.sectiontitle > h2{
+    margin: 0px;
+}
+section.sectiontitle{
+    padding-left: 30px;
+}
+button.continue{
+    background-color:tomato;
+    color: white;
+}
+hr{
+    width: 100%;
+    opacity: 0.6;
+}
+.lighttext{
+    display: inline;
+    font-weight: 100;
+    color: gray;
+}
+div > p{
+    display: inline;
+}
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: darkslategray;
+    text-align: center;
+    color: white;
+    padding: 10px 0px;
+}
+@media only screen and (min-width: 852px) {
+    /* For desktop: */
+    main{
+        margin: 50px 110px;
+    }
+    article.maincontent{
+        margin: 20px 30% 20px 0px;
+    }
+    img{
+        width: 400px;
+        height: 200px;
+    }
+    select{
+        width: 180px;
+        height: 30px;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    /* For mobile: */
+    article.titleone{
+        display: flex;
+        flex-direction: column;
+    }
+    img{
+        width: 100%;
+    }
+    section.sectiontitle{
+        padding:0px;
+    }
+    article.topSection{
+        display: flex;
+        flex-direction: column;
+    }
+    section.inputfield{order: 1}
+    section.dropdown{
+        order: 2;
+        margin-top: 10px;
+    }
+    h1.mainHeading{
+        order: 3;
+        text-align: center;
+    }
+    
+  }
