@@ -1,0 +1,40 @@
+.addTemplateHere{
+    display: flex;
+    width: 100%;
+}
+.mytemplate{
+    display: flex;
+    width: 25%;
+    margin: 10px;
+    padding: 10px;
+    border: 10px solid green;
+    border-radius: 20px;
+    color: blue;
+    flex-direction: column;
+}
+
+.videoTitle{
+    font-weight: bolder;
+}
+
+.mytemplate:hover{
+    transition: transform 2s;
+    transform:  scale(1.1) ;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    font-family:  'algerian';
+}
+
+.inputFields{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 30px;
+    margin-bottom: 50px;
+}
+
+
+

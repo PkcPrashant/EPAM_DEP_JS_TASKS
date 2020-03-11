@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="getDataFromAPI.js"></script> <!--Uncomment this line-->
+    <!-- <script src="data.js"></script> remove this line -->
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <title>YouTube Search API Task</title>
+</head>
+<body>
+    <main>
+        <h1>Youtube</h1>
+        <div class="inputFields">
+            <input id="takeSearchInput" type="text" placehoolder="Search Video" />
+            <button onclick="getData()">Search</button> <!--change method name to getData() from showContent-->
+        </div>
+        <div class="addTemplateHere"></div>
+        <!--Remove template to different file if possible-->
+        <template class="template">
+            <div class="mytemplate">
+                <div class="videoTitle"></div>
+                <div class="preview"></div>
+                <div class="author"></div>
+                <div class="published_date"></div>
+                <div class="description"></div>
+            </div>
+        </template>
+    </main>
+</body>
+</html>
