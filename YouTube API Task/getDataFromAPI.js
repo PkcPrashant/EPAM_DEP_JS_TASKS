@@ -1,6 +1,6 @@
 function getData() {
 
-    var searchTerm = document.querySelector("input#takeSearchInput").value || "trailers";
+    var searchTerm = document.querySelector("input#takeSearchInput") ? document.querySelector("input#takeSearchInput").value || "trailers" : "trailers";
 
     const url = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyDHT5ukuCBHgTyvpMVGiFXRuSksrLM-gvo&type=video&part=snippet&maxResults=15&q=${searchTerm}`;
     fetch(url)
@@ -8,4 +8,6 @@ function getData() {
     .then(resp => showContent(resp.items))
     .catch(alert);
 
-}
+};
+
+getData();
