@@ -1,12 +1,14 @@
 .addTemplateHere{
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .mytemplate{
     display: flex;
-    width: 25%;
+    width: 17%;
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
     border: 10px solid green;
     border-radius: 20px;
     color: blue;
@@ -34,6 +36,10 @@ h1{
     flex-direction: row;
     height: 30px;
     margin-bottom: 50px;
+}
+
+img{
+    width: 16.7vw;
 }
 
 

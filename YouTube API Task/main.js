@@ -1,9 +1,11 @@
 function showContent(dataList) {//set parameter as datalist
-    // dataList = dataList.items; // Remove this line
+    // dataList = dataList.items; 
 
     var template = document.querySelector("template.template");
 
-    document.querySelector(".addTemplateHere").textContent = "";
+    var addTemplateHere = document.querySelector(".addTemplateHere");
+
+    addTemplateHere.textContent = "";
 
     dataList.forEach(function (data) {
         let mytemplateNode = document.importNode(template.content.querySelector(".mytemplate"), true);
@@ -30,6 +32,6 @@ function showContent(dataList) {//set parameter as datalist
         mytemplateNode.appendChild(descriptionNode);
 
         // Append The Template To The Main Body > Main > Div
-        document.querySelector(".addTemplateHere").appendChild(mytemplateNode);
+        addTemplateHere.appendChild(mytemplateNode);
     })
 }
