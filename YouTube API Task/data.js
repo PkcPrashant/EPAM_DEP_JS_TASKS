@@ -1,4 +1,4 @@
-var dataList = {
+const dataList = {
     "kind": "youtube#searchListResponse",
     "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/hDAABTh_cSoOSUUGiQGgCBd1SWY\"",
     "nextPageToken": "CA8QAA",

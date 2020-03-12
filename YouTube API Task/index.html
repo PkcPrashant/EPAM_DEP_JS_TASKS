@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="getDataFromAPI.js"></script> 
-    <!-- Uncomment this line -->
+    <script src="getDataFromAPI.js"></script>
     <!-- <script src="data.js"></script> remove this line -->
     <script src="main.js"></script>
     <script src="main2.js"></script>
@@ -13,12 +12,16 @@
 </head>
 <body>
     <main>
-        <h1>Youtube</h1>
-        <div class="inputFields">
-            <button onclick="getPreviousData()">Previous</button>
-            <button onclick="getNextData()">Next</button>
-            <input id="takeSearchInput" type="text" placehoolder="Search Video" />
-            <button onclick="getData()">Search</button> <!--change method name to getData() from showContent-->
+        <div id="inputs">
+            <h1>Youtube</h1>
+            <div class="inputFields">
+                <input id="takeSearchInput" type="text" placeholder="Search Video" />
+                <button onclick="getData()">Search</button> <!--change method name to getData() from showContent-->
+            </div>
+            <div id="navItems">
+                <button id="previous" onclick="getPreviousData()">Previous</button>
+                <button onclick="getNextData()">Next</button>
+            </div>
         </div>
         <div class="addTemplateHere"></div>
         <!--Remove template to different file if possible-->

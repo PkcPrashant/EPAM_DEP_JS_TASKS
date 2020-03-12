@@ -1,27 +1,28 @@
 function showContent(dataList) {//set parameter as datalist
     // dataList = dataList.items; 
 
-    var template = document.querySelector("template.template");
+    const template = document.querySelector("template.template");
 
-    var addTemplateHere = document.querySelector(".addTemplateHere");
+    const addTemplateHere = document.querySelector(".addTemplateHere");
 
     addTemplateHere.textContent = "";
 
-    dataList.forEach(function (data) {
-        let mytemplateNode = document.importNode(template.content.querySelector(".mytemplate"), true);
+    dataList.forEach(data => {
+        const mytemplateNode = document.importNode(template.content.querySelector(".mytemplate"), true);
 
-        let titleNode = document.importNode(template.content.querySelector(".videoTitle"), true);
-        let previewNode = document.importNode(template.content.querySelector(".preview"), true);
-        let authorNode = document.importNode(template.content.querySelector(".author"), true);
-        let publishedNode = document.importNode(template.content.querySelector(".published_date"), true);
-        let descriptionNode = document.importNode(template.content.querySelector(".description"), true);
+        const titleNode = document.importNode(template.content.querySelector(".videoTitle"), true);
+        const previewNode = document.importNode(template.content.querySelector(".preview"), true);
+        const authorNode = document.importNode(template.content.querySelector(".author"), true);
+        const publishedNode = document.importNode(template.content.querySelector(".published_date"), true);
+        const descriptionNode = document.importNode(template.content.querySelector(".description"), true);
 
         // Add Data Here
-        previewNode.innerHTML = `<img src = "${data.snippet.thumbnails.medium.url}"/>`;
-        titleNode.textContent = data.snippet.title;
-        authorNode.textContent = data.snippet.channelTitle;
-        publishedNode.textContent = data.snippet.publishedAt;
-        descriptionNode.textContent = data.snippet.description;
+        const {title, channelTitle, publishedAt, description, thumbnails} = data.snippet;
+        previewNode.innerHTML = `<img src = "${thumbnails.medium.url}"/>`;
+        titleNode.textContent = title;
+        authorNode.textContent = channelTitle;
+        publishedNode.textContent = publishedAt;
+        descriptionNode.textContent = description;
 
         // Append All The Childs To The Div
         mytemplateNode.textContent = "";

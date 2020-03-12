@@ -28,19 +28,47 @@ h1{
     text-align: center;
     color: red;
     font-family:  'algerian';
+    margin: 0px;
+}
+#inputs{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 35px;
+    margin-bottom: 20px;
 }
 
 .inputFields{
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    height: 30px;
-    margin-bottom: 50px;
+    flex-direction: row;    
+}
+
+input{
+    width: 400px;
 }
 
 img{
     width: 16.7vw;
 }
+
+#navItems{
+    display: flex;
+    flex-direction: row;
+}
+button{
+    width: 5rem;
+    color: white;
+    background-color: black;
+    border: 0px;
+    margin-right: 5px;
+    font-weight: 500;
+    border-radius: 0 10px 10px 0;
+}
+#previous{
+    border-radius: 10px 0 0 10px;
+}
+
 
 
 

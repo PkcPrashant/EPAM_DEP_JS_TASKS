@@ -21,6 +21,6 @@ function getNextData(){
 }
 
 function getPreviousData(){
-    fetchData(searchTerm , `pageToken=${data.prevPageToken}`);
+    data.prevPageToken && fetchData(searchTerm , `pageToken=${data.prevPageToken}`);
     console.log(data.prevPageToken);
 }
