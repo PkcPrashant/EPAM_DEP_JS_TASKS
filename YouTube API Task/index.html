@@ -3,36 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="getDataFromAPI.js"></script>
-    <!-- <script src="data.js"></script> remove this line -->
-    <script src="main.js"></script>
-    <script src="main2.js"></script>
-    <link rel="stylesheet" href="style.css"/>
+    <script src="get-data-from-API.js"></script>
+    <script src="show-data.js"></script>
+    <script src="get-search-results.js"></script>
+    <link rel="stylesheet" href="style-header.css"/>
+    <link rel="stylesheet" href="style-cards.css"/>
     <title>YouTube Search API Task</title>
 </head>
 <body>
+    <header>
+        <h1>Youtube</h1>
+        <section id="searchBar">
+            <input id="searchVideoInput" type="text" placeholder="Search Video" />
+            <button id="searchButton" onclick="getSearchResults()">Search</button> <!--change method name to getData() from showContent-->
+        </section>
+        <section id="navButtons">
+            <button id="previousButton" onclick="getSearchResultsPreviousPage()">Previous</button>
+            <button id="nextButton" onclick="getSearchResultsNextPage()">Next</button>
+        </section>
+    </header>
     <main>
-        <div id="inputs">
-            <h1>Youtube</h1>
-            <div class="inputFields">
-                <input id="takeSearchInput" type="text" placeholder="Search Video" />
-                <button onclick="getData()">Search</button> <!--change method name to getData() from showContent-->
-            </div>
-            <div id="navItems">
-                <button id="previous" onclick="getPreviousData()">Previous</button>
-                <button onclick="getNextData()">Next</button>
-            </div>
-        </div>
-        <div class="addTemplateHere"></div>
-        <!--Remove template to different file if possible-->
-        <template class="template">
-            <div class="mytemplate">
-                <div class="videoTitle"></div>
-                <div class="preview"></div>
-                <div class="author"></div>
-                <div class="published_date"></div>
-                <div class="description"></div>
-            </div>
+        <article id="videoCardList"></article>
+        <template>
+            <section id="videoCard">
+                <div id="videoTitle"></div>
+                <div id="preview"></div>
+                <div id="author"></div>
+                <div id="published-date"></div>
+                <div id="description"></div>
+            </section>
         </template>
     </main>
 </body>

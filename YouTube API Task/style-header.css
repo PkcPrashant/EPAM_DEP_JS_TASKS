@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 35px;
+    margin-bottom: 20px;
+}
+h1{
+    text-align: center;
+    color: red;
+    font-family:  'algerian';
+    margin: 0px;
+}
+#searchBar{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;    
+}
+input{
+    width: 20vw;
+    border-radius: 10px 0 0 10px;
+    padding: 10px;
+}
+button{
+    width: 5rem;
+    color: white;
+    background-color: black;
+    border: 0px;
+    margin-right: 5px;
+    font-weight: 500;
+    border-radius: 0 10px 10px 0;
+}
+#navButtons{
+    display: flex;
+    flex-direction: row;
+}
+#previous{
+    border-radius: 10px 0 0 10px;
+}
